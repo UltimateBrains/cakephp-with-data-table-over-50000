@@ -140,12 +140,12 @@ class LeadsController extends AppController
         $offset = intval($request['length']);
 
         // $sLimit = "";
-            if ( ( $page  > 0 ) && ( $offset) ) {
+               if ( ( $page  > 0 ) && ( $offset) ) {
          
         // if ( isset( $request['start'] ) && $request['length'] != '-1' ) {
 
             // $sLimit = " LIMIT ".intval( $request['start'] ).", ".intval( $request['length'] );
-            $sql = $this->Leads->find()->limit($page)->page($offset)->toArray();
+            $sql = $this->Leads->find()->limit($offset)->page($page)->toArray();
 
         }
 
